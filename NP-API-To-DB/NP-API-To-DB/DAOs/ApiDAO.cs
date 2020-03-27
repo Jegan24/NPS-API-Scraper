@@ -30,25 +30,6 @@ namespace NP_API_To_DB.DAOs
                     data = JsonSerializer.CreateDefault().Deserialize<Rootobject>(jsonReader).data;
                 }
             }
-            //data = JsonConvert.DeserializeObject(response.GetResponseStream()
-            //JsonReader jsonReader = 
-            //using (HttpClient client = new HttpClient())
-            //{
-            //    client.BaseAddress = new Uri("https://api.nps.gov/api/v1/");
-            //    client.Timeout.Add(TimeSpan.FromMinutes(10));
-                               
-            //    Task<HttpResponseMessage> responseTask = client.GetAsync("parks?limit=1000&start=1&api_key=" + npsApiKey);
-            //    Thread newThread = new Thread(new ThreadStart(responseTask.Wait));
-            //    newThread.Start();
-            //    HttpResponseMessage result = responseTask.Result;
-
-            //    if (result.IsSuccessStatusCode)
-            //    {
-            //        string content = await result.Content.ReadAsStringAsync();
-            //        data = JsonConvert.DeserializeObject<Rootobject>(content).data;
-            //    }
-            //}
-
             return data;
         }
     }
